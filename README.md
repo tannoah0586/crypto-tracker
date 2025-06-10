@@ -40,12 +40,12 @@ The system operates through a series of interconnected Airtable Automations:
 
 1.  **Data Storage - Crypto Tokens List:**
     All cryptocurrency tokens to be tracked, along with their CoinGecko IDs, current prices, and user-defined upper/lower limits, are stored in an Airtable base.
-    ![List of Crypto Tokens in Database](images/list_of_crypto_tokens_in_database.jpg)
+    ![List of Crypto Tokens in Database](images/list-of-crypto-tokens-in-database.jpg)
 
 2.  **Automated Price Fetching & Update:**
     A scheduled automation runs a custom JavaScript script hourly. This script iterates through the records in the Airtable table, fetches the latest price for each token from the CoinGecko API, and updates the `Current Price` field in the Airtable database. It also resets the `Notify` flag if a notification was previously sent, allowing new alerts.
-    ![Overview of Automations - Fetch Crypto and Share Prices](images/overview_of_automations.jpg)
-    ![Script of Fetching API and Updating Current Price](images/script_of_fetching_api_and_updating_current_price.jpg)
+    ![Overview of Automations - Fetch Crypto and Share Prices](images/overview-of-automations.jpg)
+    ![Script of Fetching API and Updating Current Price](images/script-of-fetching-api-and-updating-current-price.jpg)
 
 3.  **Notification Triggering:**
     Separate automations are set up to trigger when a record's `Current Price` crosses either the `Upper Limit` or `Lower Limit`. These automations are conditioned to only fire if a notification hasn't been sent recently for that token (checked by a `Notify` and `Notified` field logic).
@@ -54,9 +54,9 @@ The system operates through a series of interconnected Airtable Automations:
 4.  **Multi-Channel Alerts:**
     Upon a trigger, the system can send alerts via:
     * **Email:** A detailed email notification is sent to the specified recipient, showing the token, current price, and limits.
-        ![Snapshot of Email Notification](images/snapshot_of_email_notification.png)
+        ![Snapshot of Email Notification](images/snapshot-of-email-notification.png)
     * **Slack:** An alternative automation is configured to send a message to a designated Slack channel.
-        ![Alternative Notification - Sending via Slack App](images/alternative_notification_sending_thru_slack_app.jpg)
+        ![Alternative Notification - Sending via Slack App](images/alternative-notification-sending-thru-slack-app.jpg)
 
 ## 🛠️ Technologies Used
 
