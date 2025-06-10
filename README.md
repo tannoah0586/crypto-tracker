@@ -49,7 +49,7 @@ The system operates through a series of interconnected Airtable Automations:
 
 3.  **Notification Triggering:**
     Separate automations are set up to trigger when a record's `Current Price` crosses either the `Upper Limit` or `Lower Limit`. These automations are conditioned to only fire if a notification hasn't been sent recently for that token (checked by a `Notify` and `Notified` field logic).
-    ![Triggers to Send Notification and Updating Records](images/triggers_to_send_notification_and_updating_records.jpg)
+    ![Triggers to Send Notification and Updating Records](images/triggers-to-send-notification-and-updating-records.jpg)
 
 4.  **Multi-Channel Alerts:**
     Upon a trigger, the system can send alerts via:
